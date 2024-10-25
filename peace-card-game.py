@@ -11,8 +11,18 @@ deck = ((rank, suit) for rank in ranks for suit in suits)
 random.shuffle(deck)
 
 # Split the deck into two hands
-p1_hand = deck[:int(len(deck)/2)]
-p2_hand = deck[int(len(deck)/2):]
+p1_hand = deck[:int(len(deck)/2)] #player 1 gets the first half of the deck
+p2_hand = deck[int(len(deck)/2):] #player 2 gets the second half of the deck
+
+# draw crad
+def draw_card(p1_hand, p2_hand):
+     p1_card = p1_hand.pop(0)
+     p2_card = p2_hand.pop(0)
+     
+     print(f"Player 1 drew: {p1_card}")
+     print(f"Player 2 drew: {p2_card}")
+     
+     return (p1_card, p2_card)
 
 def card_comparison(p1_card, p2_card):
     """This is the logic that compares two cards to find the stronger card
