@@ -8,9 +8,11 @@ suits = ("hearts", "diamonds", "clubs", "spades")
 # Create a deck of cards
 deck = ((rank, suit) for rank in ranks for suit in suits)
 # Shuffle the deck 
-
+random.shuffle(deck)
 
 # Split the deck into two hands
+p1_hand = deck[:int(len(deck)/2)]
+p2_hand = deck[int(len(deck)/2):]
 
 def card_comparison(p1_card, p2_card):
     """This is the logic that compares two cards to find the stronger card
