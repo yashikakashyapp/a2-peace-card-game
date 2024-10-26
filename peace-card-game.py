@@ -135,8 +135,16 @@ def war(player1_hand, player2_hand):
 
 def play_game():
     """Main function to run the game."""
-    # Your code here
+    while len(p1_hand) > 0 and len(p2_hand) > 0:
+        play_round(p1_hand, p2_hand)
+    
+	# game has ended
+    print("Game has ended.")
+    
+    if len(p1_hand) == 0:
+        print("Player 2 won!")
+    else:
+        print("Player 1 won!")
 
 # Call the main function to start the game
 play_game()
-pass
