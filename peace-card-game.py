@@ -114,6 +114,23 @@ def war(player1_hand, player2_hand):
     
     comparison_result = card_comparison(p1_card, p2_card)
     
+    player_cards = player1_cards
+    for card in player2_cards:
+        player_cards.append(card)
+        
+    if comparison_result == 1:
+        # Player 1 won
+        add_cards_to_hand(player1_hand, player_cards)
+    elif comparison_result == 2:
+        # Player 2 won
+        add_cards_to_hand(player2_hand, player_cards)
+    elif comparison_result == 0:
+        # Draw
+        print("WAR!")
+        war(player1_hand, player2_hand)
+    
+    return 
+        
     
 
 def play_game():
