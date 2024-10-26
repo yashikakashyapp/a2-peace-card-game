@@ -1,5 +1,6 @@
 # Import necessary modules
 import random
+import time
 
 # Define the ranks and suits
 ranks = ("2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A")
@@ -137,6 +138,7 @@ def play_game():
     """Main function to run the game."""
     while len(p1_hand) > 0 and len(p2_hand) > 0:
         play_round(p1_hand, p2_hand)
+        time.sleep(2)
     
 	# game has ended
     print("Game has ended.")
