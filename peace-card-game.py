@@ -14,7 +14,7 @@ random.shuffle(deck)
 p1_hand = deck[:int(len(deck)/2)] #player 1 gets the first half of the deck
 p2_hand = deck[int(len(deck)/2):] #player 2 gets the second half of the deck
 
-# draw crad
+# draws a card from hand
 def draw_card(p1_hand, p2_hand):
      p1_card = p1_hand.pop(0)
      p2_card = p2_hand.pop(0)
@@ -30,7 +30,14 @@ def card_comparison(p1_card, p2_card):
 		if the cards are equal, return 0.
 
 		Hint, using the index function will make this very simple (one liner)"""
-    # Your code here
+    if ranks.index(p1_card[0]) > ranks.index(p2_card[0]):
+        return 1
+    elif ranks.index(p1_card[0]) < ranks.index(p2_card[0]):
+        return 2
+    else:
+        return 0
+
+card_comparison
 
 def play_round(player1_hand, player2_hand):
     """Play a single round of the game.
@@ -38,6 +45,7 @@ def play_round(player1_hand, player2_hand):
 		if both players flip the same value card, call the war function
 	"""
     # Your code here
+    pass
 
 def war(player1_hand, player2_hand):
     """Handle the 'war' scenario when cards are equal.
@@ -46,10 +54,11 @@ def war(player1_hand, player2_hand):
 		card takes all the cards.		
 	"""
     # Your code here
-
+pass
 def play_game():
     """Main function to run the game."""
     # Your code here
 
 # Call the main function to start the game
 play_game()
+pass
